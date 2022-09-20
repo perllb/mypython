@@ -11,6 +11,7 @@ jobs:
     python-version: [3.6, 3.7, 3.8]
    steps:
     - uses: actions/checkout@v2
+
     - name: Set up Python all python version
       uses: actions/setup-python@v2
       with:
@@ -18,5 +19,6 @@ jobs:
        architecture: x64
     - name: Install dependencies
       run: pip install -r requirements.txt 
+
     - name: Run Test
       run: python -m unittest discover tests
